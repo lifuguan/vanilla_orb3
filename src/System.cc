@@ -116,7 +116,9 @@ System::System(const string &strVocFile, const string &strSettingsFile, const eS
 
         mpVocabulary = new ORBVocabulary();
         bool bVocLoad = mpVocabulary->loadFromTextFile(strVocFile);
-        if(!bVocLoad)
+//        mpVocabulary = new ORBVocabulary();
+        //bool bVocLoad = mpVocabulary->loadFromTextFile(strVocFile);   //txt加载
+//        bool bVocLoad = mpVocabulary->loadFromBinaryFile(strVocFile);   //bin加载if(!bVocLoad)
         {
             cerr << "Wrong path to vocabulary. " << endl;
             cerr << "Falied to open at: " << strVocFile << endl;
